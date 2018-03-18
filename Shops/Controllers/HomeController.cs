@@ -10,9 +10,13 @@ namespace Shops.Controllers
 {
     public class HomeController : Controller
     {
+        string db = "storage.json";
+
         public IActionResult Index()
         {
-            return View();
+            var boots = Storage.GetBoots(db);
+
+            return View(boots.Values.ToList());
         }
 
         public IActionResult About()
