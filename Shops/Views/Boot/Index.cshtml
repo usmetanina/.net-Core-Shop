@@ -1,29 +1,20 @@
 ﻿@model Shops.Models.Boot
 @{
-    Layout = null;
+    ViewData["Title"] = "Описание модели кроссовок" + @ViewBag.BootId;
 }
-<!DOCTYPE html>
-
-<html>
-<head>
-    <title>Карточка модели кроссовок</title>
-</head>
-<body>
-    <h3>Кроссовки под id @ViewBag.BootsId</h3>
-    <table>
-        <tr>
-            <td>Модель</td>
-            <td>Цена</td>
-            <td>Производитель</td>
-            <td>Цвет</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>@Model.Name</td>
-            <td>@Model.Price</td>
-            <td>@Model.Company</td>
-            <td>@Model.Color</td>
-        </tr>
-    </table>
-</body>
-</html>
+<h3>Кроссовки под id @ViewBag.BootId</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Модель</td>
+        <td>Цена</td>
+        <td>Производитель</td>
+        <td>Цвет</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>@Model.Name</td>
+        <td>@Model.Price</td>
+        <td>@Model.Company</td>
+        <td>@Model.Color</td>
+    </tr>
+</table>

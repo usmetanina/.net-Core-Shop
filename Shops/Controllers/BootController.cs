@@ -12,6 +12,7 @@ namespace Shops.Controllers
     {
         string db = "storage.json";
 
+        [ResponseCache(Duration = 50)]
         public IActionResult Index(int id)
         {
             Boot boot = Storage.GetBootById(db, id);

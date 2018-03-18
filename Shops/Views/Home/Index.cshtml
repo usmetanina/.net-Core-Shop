@@ -1,31 +1,22 @@
 ﻿@model IEnumerable<Shops.Models.Boot>
 @{
-    //ViewData["Title"] = "Список смартфонов";
-    Layout = null;
+    ViewData["Title"] = "Каталог кроссовок";
 }
-<!DOCTYPE html>
 
-<html>
-<head>
-    <title>Магазин кроссовок</title>
-</head>
-<body>
-    <h3>Кроссовки</h3>
-    <table>
-        <tr>
-            <td>Модель</td>
-            <td>Цена</td>
-            <td>Подробнее</td>
-            <td></td>
-        </tr>
-        @foreach (var boot in Model)
-        {
-        <tr>
-            <td>@boot.Name</td>
-            <td>@boot.Price</td>
-            <td><a href="~/Boot/Index/@boot.Id">Описание</a></td>
-        </tr>
-        }
-    </table>
-</body>
-</html>
+<h3>Каиалог кроссовок</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Модель</td>
+        <td>Цена</td>
+        <td>Подробнее</td>
+        <td></td>
+    </tr>
+    @foreach (var boot in Model)
+    {
+    <tr>
+        <td>@boot.Name</td>
+        <td>@boot.Price</td>
+        <td><a href="~/Boot/Index/@boot.Id">Описание</a></td>
+    </tr>
+    }
+</table>
